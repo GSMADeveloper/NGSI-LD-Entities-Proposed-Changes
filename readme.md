@@ -10,5 +10,5 @@ This will include entities which have updated definitions, as well as new entiti
 
 | Entity Name | Specification | Context Definition | Example Entity |
 |:--- |:--- |:--- |:--- |
-| **Smart Metering** | [*Smart Metering* entity specification.](definitions/Smart-Metering.md) | [*Smart Metering* context example.](examples/Smart-Metering-context.jsonld) | [*Smart Metering* entity example.](examples/Smart-Metering.jsonld) |
+| **Smart Meter Observed** | [*Smart Meter Observed* entity specification.](definitions/Smart-Meter-Observed.md) | [*Smart Meter Observed* context example.](examples/Smart-Meter-Observed-context.jsonld) | [*Smart Meter Observed* entity example.](examples/Smart-Meter-Observed.jsonld) |
 

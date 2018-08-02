@@ -1,5 +1,5 @@
-# Smart Metering
-This entity contains a harmonised description of a Smart Metering observation, generally applicable for Smart Homes, Industry, Cities and Agriculture.
+# Smart Meter Observed
+This entity contains a harmonised description of a Smart Meter Observation, generally applicable for Smart Homes, Industry, Cities and Agriculture.
 
 | Attribute Name | Attribute Type | Description | Constraint |
 |:--- |:--- |:--- |:---:|
@@ -22,9 +22,9 @@ This entity contains a harmonised description of a Smart Metering observation, g
 | place | Property | Alternate specification of the installation location for the Smart Meter | Optional |
 
 ## NGSI-LD Context Definition
-The following NGSI-LD context definition applies to the **Smart Metering** entity
+The following NGSI-LD context definition applies to the **Smart Meter Observed** entity
 
-[Download context definition.](../examples/Smart-Metering-context.jsonld)
+[Download context definition.](../examples/Smart-Meter-Observed-context.jsonld)
 
 ```JavaScript
 {
@@ -48,16 +48,16 @@ The following NGSI-LD context definition applies to the **Smart Metering** entit
     }
 }
 ```
-## Example of Smart Metering Entity
-The following is an example instance of the **Smart Metering** entity
+## Example of Smart Meter Observed Entity
+The following is an example instance of the **Smart Meter Observed** entity
 
-[Download example entity definition.](../examples/Smart-Metering.jsonld)
+[Download example entity definition.](../examples/Smart-Meter-Observed.jsonld)
 
 ```JavaScript
 {
     "@context": [
         "https://example.com/contexts/coreContext.jsonld",
-        "https://github.com/GSMADeveloper/NGSI-LD-Entities/tree/master/examples/Smart-Metering-context.jsonld"
+        "https://github.com/GSMADeveloper/NGSI-LD-Entities/tree/master/examples/Smart-Meter-Observed-context.jsonld"
     ],
     "id": "urn:ngsi-ld:SmartMeterObserved:bc7930aa-965f-11e8-b327-2be817efd126",
     "type": "SmartMeterObserved",
