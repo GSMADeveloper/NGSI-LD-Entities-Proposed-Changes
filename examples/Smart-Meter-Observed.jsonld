@@ -37,6 +37,10 @@
         "value": 1076.5,
         "unitCode": "KWH"
     },
+    "photo": {
+        "type": "Property",
+        "value": "iVBORw0KGgoAAAANSUhEUgAAAGcAAABkCAIAAAAUt...ErkJggg=="
+    },
     "serialNumber": {
         "type": "Property",
         "value": "Meb3c534be378"

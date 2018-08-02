@@ -15,6 +15,7 @@ This entity contains a harmonised description of a Smart Meter Observation, gene
 | location | GeoProperty | The geo:json encoded current GPS position of the Smart Meter. | Mandatory |
 | observedAt | TemporalProperty | Indicates the date/time the most recent observation was recorded. | Mandatory |
 | totalConsumption | Property | The total amount of product supplied as recorded by the meter since installation. The relevant unitCode should be specified such as KWH (Kilo Watt Hours) for Electricity, LTR (Litre) or MTQ (Cubic Metre) for gases or liquids. | Mandatory |
+| photo | Property | The text string encoded from the binary data of a JPEG format photo of the meter. The binary data must be converted to ASCII text using the base64 encoding standard. | Recommended |
 | serialNumber | Property | The serial number of the meter as assigned by the manufacturer. | Recommended |
 | peakConsumption | Property | The total amount of product supplied during 'peak' hours (particularly relevant to Electricity supply) as recorded by the meter since installation. The relevant unitCode should be specified such as KWH (Kilo Watt Hours) for Electricity, LTR (Litre) or MTQ (Cubic Metre) for gases or liquids. | Optional |
 | offPeakConsumption | Property | The total amount of product supplied during 'off-peak' hours (particularly relevant to Electricity supply) as recorded by the meter since installation. The relevant unitCode should be specified such as KWH (Kilo Watt Hours) for Electricity, LTR (Litre) or MTQ (Cubic Metre) for gases or liquids. | Optional |
@@ -92,6 +93,10 @@ The following is an example instance of the **Smart Meter Observed** entity
         "type": "Property",
         "value": 1076.5,
         "unitCode": "KWH"
+    },
+    "photo": {
+        "type": "Property",
+        "value": "iVBORw0KGgoAAAANSUhEUgAAAGcAAABkCAIAAAAUt...ErkJggg=="
     },
     "serialNumber": {
         "type": "Property",
