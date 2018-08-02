@@ -1,0 +1,68 @@
+{
+    "@context": [
+        "https://example.com/contexts/coreContext.jsonld",
+        "https://raw.githubusercontent.com/GSMADeveloper/NGSI-LD-Entities/master/examples/Smart-Metering-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:SmartMeterObserved:bc7930aa-965f-11e8-b327-2be817efd126",
+    "type": "SmartMeterObserved",
+    "createdAt": "2018-07-01T01:20:00Z",
+    "modifiedAt": "2018-07-04T12:30:00Z",
+    "source": "https://source.example.com",
+    "dataProvider": "https://provider.example.com",
+    "entityVersion": 2.0,
+    "meterType": {
+        "type": "Property",
+        "value": "Electricity"
+    },
+    "device": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Device:7a0708f6-9668-11e8-8f77-abc2b62ebaac"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -103.9904,
+                39.7564
+            ]
+        }
+    },
+    "observedAt": {
+        "type": "TemporalProperty",
+        "value": "2018-05-04T10:18:16Z"
+    },
+    "totalConsumption": {
+        "type": "Property",
+        "value": 1076.5,
+        "unitCode": "KWH"
+    },
+    "serialNumber": {
+        "type": "Property",
+        "value": "Meb3c534be378"
+    },
+    "peakConsumption": {
+        "type": "Property",
+        "value": 976.5,
+        "unitCode": "KWH"
+    },
+    "offPeakConsumption": {
+        "type": "Property",
+        "value": 100.0,
+        "unitCode": "KWH"
+    },
+    "powerFactor": {
+        "type": "Property",
+        "value": 1.05,
+        "unitCode": "C62"
+    },
+    "place": {
+        "type": "Property",
+        "address": {
+            "type": "PostalAddress",
+            "addressLocality": "London",
+            "postalCode": "EC4N 8AF",
+            "streetAddress": "25 Walbrook"
+        }
+    }
+}
