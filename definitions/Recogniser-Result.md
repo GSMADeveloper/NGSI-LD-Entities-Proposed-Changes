@@ -1,0 +1,95 @@
+# Recogniser Result
+This entity contains a generic model for the resulting outputs from an AI/ Machine Learning based image/audio recogniser
+
+| Attribute Name | Attribute Type | Description | Constraint |
+|:--- |:--- |:--- |:---:|
+| id | @id | Provides a unique identifier for an instance of the entity either in the form of a URI (i.e. either a publicly accessible URL or a URN). | Mandatory |
+| type | @type | Defines the type of the entity. | Mandatory |
+| createdAt | DateTime | Indicates the date/ time that the instance of the entity was created in ISO 8601 format. The value of this will be set by the server when the entity was created. | Mandatory |
+| modifiedAt | DateTime | Indicates the date/ time when the entity was last modified in ISO 8601 format. The value of this will be set by the server when the entity was modified, if the entity has not been modified it may have a null value. | Optional |
+| source | Property | Specifies the URL to the source of this data (either organisation or where relevant more specific source) | Recommended |
+| dataProvider | Property | Specifies the URL to information about the provider of this information | Recommended |
+| entityVersion | Property | The entity specification version as a number. A version number of 2.0 or later denotes the entity is represented using NGSI-LD | Recommended |
+| recogniserInput | Relationship | Reference to the Recogniser Input that this result is related to. | Mandatory |
+| processedAt | TemporalProperty | Indicates the date/time when the processing completed. | Mandatory |
+| processedDuration | TemporalProperty | Indicates the elapsed time required to process the input (in hours, minutes and seconds). | Optional |
+| recognisedFeatures | Property | The 'features' that were recognised from the input data. This should be an array of objects representing the output from the recognition process, though the contents of each result object will be specific to the recognition process. The actual contents of this will depend on the design of the recognition engine. See additional notes below. | Mandatory |
+
+###recognisedFeatures notes
+ the purpose of the *recognisedFeatures* property is to hold any of the results from the recognition process. Since recognition tasks are application specific this means that there will be various types of response that need to be supported. Also whilst certain recognition processes might identify single values such as the classification of an object, or a single numerical value, in the general case the recognition process could be generating multiple results and this is why this property is coded as an array.
+
+ It is recommended that certain field names have defined meanings within the recognition results. For example
+
+ + *classification* designates the corresponding value is a result of classifying the input into one of a finite set of pre-defined 'named' classifications. This will usually have a text value.
+ + *quantity* designates the corresponding value as a result of determining a numeric value from the source - the result will be a real (numeric) value.
+ + *confidence* designates the corresponding confidence level in the classification, with values between 0 (no confidence) and 1 (100% confidence).
+ + *text* indicates that the recognition process has identified a textual value, this could be from either voice or image recognition.
+ + *startTimecode* relevant to audio recognition and indicates the starting timecode (*hhh:mm:ss.ccc* - hours, minutes, seconds and milliseconds) of a recognised word in the *text* field.
+ + *endTimecode* relevant to audio recognition and indicates the ending timecode (*hhh:mm:ss.ccc* - hours, minutes, seconds and milliseconds) of a recognised word in the *text* field.
+ + *polygon* relevant to image recognition this indicates the area of the source frame that contains the recognised feature. This will be an array of pixel positions representing a closed polygon of 3 or more sides e.g. *[[x1,y1],[x2,y2],[x3,y3],[x4,y4],[x1,y1]]* relative to the bottom left of the source image.
+
+## NGSI-LD Context Definition
+The following NGSI-LD context definition applies to the **Recogniser Result** entity
+
+[Download context definition.](../examples/Recogniser-Result-context.jsonld)
+
+```JavaScript
+{
+    "id": "@id",
+    "type": "@type",
+    "DateTime": "http://uri.etsi.org/ngsi-ld/DateTime",
+    "createdAt": {
+        "@id": "http://uri.etsi.org/ngsi-ld/createdAt",
+        "@type": "DateTime"
+    },
+    "modifiedAt": {
+        "@id": "http://uri.etsi.org/ngsi-ld/modifiedAt",
+        "@type": "DateTime"
+    },
+    "Property": "http://etsi.org/nsgi-ld/Property",
+    "Relationship": "http://uri.etsi.org/ngsi-ld/Relationship",
+    "TemporalProperty": "http://uri.etsi.org/ngsi-ld/TemporalProperty"
+}
+```
+## Example of Recogniser Result Entity
+The following is an example instance of the **Recogniser Result** entity
+
+[Download example entity definition.](../examples/Recogniser-Result.jsonld)
+
+```JavaScript
+{
+    "@context": [
+        "https://example.com/contexts/coreContext.jsonld",
+        "https://github.com/GSMADeveloper/NGSI-LD-Entities/tree/master/examples/Recogniser-Result-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:RecogniserResult:0df4c88a-9ae4-11e8-965d-0f9a6c9e5225",
+    "type": "RecogniserResult",
+    "createdAt": "2018-07-01T01:20:00Z",
+    "modifiedAt": "2018-07-04T12:30:00Z",
+    "source": "https://source.example.com",
+    "dataProvider": "https://provider.example.com",
+    "entityVersion": 2.0,
+    "recogniserInput": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:RecogniserInput:4aad67e8-9ae2-11e8-a2a9-f77b8d50602c"
+    },
+    "processedAt": {
+        "type": "TemporalProperty",
+        "value": "2018-05-04T10:18:16Z"
+    },
+    "processedDuration": {
+        "type": "TemporalProperty",
+        "value": "000:01:35"
+    },
+    "recognisedFeatures": {
+        "type": "Property",
+        "value": [
+            {
+                "classification": "car",
+                "registration": "8128",
+                "confidence": 0.98
+            }
+        ]
+    }
+}
+```

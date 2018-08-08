@@ -1,0 +1,46 @@
+{
+    "@context": [
+        "https://example.com/contexts/coreContext.jsonld",
+        "https://raw.githubusercontent.com/GSMADeveloper/NGSI-LD-Entities/master/examples/Recogniser-Input-context.jsonld"
+    ],
+    "id": "urn:ngsi-ld:RecogniserInput:4aad67e8-9ae2-11e8-a2a9-f77b8d50602c",
+    "type": "RecogniserInput",
+    "createdAt": "2018-07-01T01:20:00Z",
+    "modifiedAt": "2018-07-04T12:30:00Z",
+    "source": "https://source.example.com",
+    "dataProvider": "https://provider.example.com",
+    "entityVersion": 2.0,
+    "contentType": {
+        "type": "Property",
+        "value": "image/jpeg"
+    },
+    "data": {
+        "type": "Property",
+        "value": "iVBORw0KGgoAAAANSUhEUgAAAGcAAABkCAIAAAAUt...ErkJggg=="
+    },
+    "observedAt": {
+        "type": "TemporalProperty",
+        "value": "2018-05-04T10:18:16Z"
+    },
+    "device": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Device:7a0708f6-9668-11e8-8f77-abc2b62ebaac"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -103.9904,
+                39.7564
+            ]
+        }
+    },
+    "metadata": {
+        "type": "Property",
+        "value": {
+            "X-Resolution": 240,
+            "Y-Resolution": 240
+        }
+    }
+}

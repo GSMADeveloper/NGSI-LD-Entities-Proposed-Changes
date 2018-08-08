@@ -10,17 +10,15 @@ This entity contains a harmonised description of a Smart Meter Observation, gene
 | source | Property | Specifies the URL to the source of this data (either organisation or where relevant more specific source) | Recommended |
 | dataProvider | Property | Specifies the URL to information about the provider of this information | Recommended |
 | entityVersion | Property | The entity specification version as a number. A version number of 2.0 or later denotes the entity is represented using NGSI-LD | Recommended |
-| meterType | Property | The type of supply being metered e.g.: **Electricity, Gasoline, Water, Methane, Diesel.** | Mandatory |
-| device | Relationship | Reference to the IoT device which generated the most recent observation. | Mandatory |
-| location | GeoProperty | The geo:json encoded current GPS position of the Smart Meter. | Mandatory |
+| smartMeter | Relationship | Reference to the Smart Meter that this observation related to. | Mandatory |
+| location | GeoProperty | Confirmation of the geo:json encoded current GPS position of the Smart Meter. | Optional |
 | observedAt | TemporalProperty | Indicates the date/time the most recent observation was recorded. | Mandatory |
 | totalConsumption | Property | The total amount of product supplied as recorded by the meter since installation. The relevant unitCode should be specified such as KWH (Kilo Watt Hours) for Electricity, LTR (Litre) or MTQ (Cubic Metre) for gases or liquids. | Mandatory |
-| photo | Property | The text string encoded from the binary data of a JPEG format photo of the meter. The binary data must be converted to ASCII text using the base64 encoding standard. | Recommended |
-| serialNumber | Property | The serial number of the meter as assigned by the manufacturer. | Recommended |
+| photo | Property | A picture of the meter showing the reading. Comprises the text string encoded from the binary data of a JPEG format photo of the meter. The binary data must be converted to ASCII text using the base64 encoding standard. | Recommended |
 | peakConsumption | Property | The total amount of product supplied during 'peak' hours (particularly relevant to Electricity supply) as recorded by the meter since installation. The relevant unitCode should be specified such as KWH (Kilo Watt Hours) for Electricity, LTR (Litre) or MTQ (Cubic Metre) for gases or liquids. | Optional |
 | offPeakConsumption | Property | The total amount of product supplied during 'off-peak' hours (particularly relevant to Electricity supply) as recorded by the meter since installation. The relevant unitCode should be specified such as KWH (Kilo Watt Hours) for Electricity, LTR (Litre) or MTQ (Cubic Metre) for gases or liquids. | Optional |
 | powerFactor | Property | Relevant to 3-Phase electricity supplies often used in industry - the power factor ranges from -1 to +1 depending on the net balance between capacitive and inductive loads. If used this measures the average power factor since meter installation. | Optional |
-| place | Property | Alternate specification of the installation location for the Smart Meter | Optional |
+| place | Property | Confirmation of the current location for the Smart Meter | Optional |
 
 ## NGSI-LD Context Definition
 The following NGSI-LD context definition applies to the **Smart Meter Observed** entity
@@ -67,13 +65,9 @@ The following is an example instance of the **Smart Meter Observed** entity
     "source": "https://source.example.com",
     "dataProvider": "https://provider.example.com",
     "entityVersion": 2.0,
-    "meterType": {
-        "type": "Property",
-        "value": "Electricity"
-    },
-    "device": {
+    "smartMeter": {
         "type": "Relationship",
-        "object": "urn:ngsi-ld:Device:7a0708f6-9668-11e8-8f77-abc2b62ebaac"
+        "object": "urn:ngsi-ld:SmartMeter:8ac0db56-9adf-11e8-ad67-e7308e2e8b15"
     },
     "location": {
         "type": "GeoProperty",
@@ -97,10 +91,6 @@ The following is an example instance of the **Smart Meter Observed** entity
     "photo": {
         "type": "Property",
         "value": "iVBORw0KGgoAAAANSUhEUgAAAGcAAABkCAIAAAAUt...ErkJggg=="
-    },
-    "serialNumber": {
-        "type": "Property",
-        "value": "Meb3c534be378"
     },
     "peakConsumption": {
         "type": "Property",

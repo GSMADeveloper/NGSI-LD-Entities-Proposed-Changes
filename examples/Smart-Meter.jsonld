@@ -1,18 +1,22 @@
 {
     "@context": [
         "https://example.com/contexts/coreContext.jsonld",
-        "https://raw.githubusercontent.com/GSMADeveloper/NGSI-LD-Entities/master/examples/Smart-Meter-Observed-context.jsonld"
+        "https://raw.githubusercontent.com/GSMADeveloper/NGSI-LD-Entities/master/examples/Smart-Meter-context.jsonld"
     ],
-    "id": "urn:ngsi-ld:SmartMeterObserved:bc7930aa-965f-11e8-b327-2be817efd126",
-    "type": "SmartMeterObserved",
+    "id": "urn:ngsi-ld:SmartMeter:8ac0db56-9adf-11e8-ad67-e7308e2e8b15",
+    "type": "SmartMeter",
     "createdAt": "2018-07-01T01:20:00Z",
     "modifiedAt": "2018-07-04T12:30:00Z",
     "source": "https://source.example.com",
     "dataProvider": "https://provider.example.com",
     "entityVersion": 2.0,
-    "smartMeter": {
+    "meterType": {
+        "type": "Property",
+        "value": "Electricity"
+    },
+    "device": {
         "type": "Relationship",
-        "object": "urn:ngsi-ld:SmartMeter:8ac0db56-9adf-11e8-ad67-e7308e2e8b15"
+        "object": "urn:ngsi-ld:Device:7a0708f6-9668-11e8-8f77-abc2b62ebaac"
     },
     "location": {
         "type": "GeoProperty",
@@ -24,33 +28,9 @@
             ]
         }
     },
-    "observedAt": {
-        "type": "TemporalProperty",
-        "value": "2018-05-04T10:18:16Z"
-    },
-    "totalConsumption": {
-        "type": "Property",
-        "value": 1076.5,
-        "unitCode": "KWH"
-    },
     "photo": {
         "type": "Property",
         "value": "iVBORw0KGgoAAAANSUhEUgAAAGcAAABkCAIAAAAUt...ErkJggg=="
-    },
-    "peakConsumption": {
-        "type": "Property",
-        "value": 976.5,
-        "unitCode": "KWH"
-    },
-    "offPeakConsumption": {
-        "type": "Property",
-        "value": 100.0,
-        "unitCode": "KWH"
-    },
-    "powerFactor": {
-        "type": "Property",
-        "value": 1.05,
-        "unitCode": "C62"
     },
     "place": {
         "type": "Property",
