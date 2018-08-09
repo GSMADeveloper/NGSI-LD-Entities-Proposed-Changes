@@ -10,15 +10,15 @@ This entity contains a harmonised description of a Smart Meter Observation, gene
 | source | Property | Specifies the URL to the source of this data (either organisation or where relevant more specific source) | Recommended |
 | dataProvider | Property | Specifies the URL to information about the provider of this information | Recommended |
 | entityVersion | Property | The entity specification version as a number. A version number of 2.0 or later denotes the entity is represented using NGSI-LD | Recommended |
-| smartMeter | Relationship | Reference to the Smart Meter that this observation related to. | Mandatory |
-| location | GeoProperty | Confirmation of the geo:json encoded current GPS position of the Smart Meter. | Optional |
+| smartMeter | Relationship | Reference to the Smart Meter that this observation relates to. | Mandatory |
+| location | GeoProperty | The geo:json encoded current GPS position of the Smart Meter. The main purpose for this is with meters that are installed for example on mobile fuel supply vehicles (such as for heating oil). | Optional |
 | observedAt | TemporalProperty | Indicates the date/time the most recent observation was recorded. | Mandatory |
 | totalConsumption | Property | The total amount of product supplied as recorded by the meter since installation. The relevant unitCode should be specified such as KWH (Kilo Watt Hours) for Electricity, LTR (Litre) or MTQ (Cubic Metre) for gases or liquids. | Mandatory |
 | photo | Property | A picture of the meter showing the reading. Comprises the text string encoded from the binary data of a JPEG format photo of the meter. The binary data must be converted to ASCII text using the base64 encoding standard. | Recommended |
 | peakConsumption | Property | The total amount of product supplied during 'peak' hours (particularly relevant to Electricity supply) as recorded by the meter since installation. The relevant unitCode should be specified such as KWH (Kilo Watt Hours) for Electricity, LTR (Litre) or MTQ (Cubic Metre) for gases or liquids. | Optional |
 | offPeakConsumption | Property | The total amount of product supplied during 'off-peak' hours (particularly relevant to Electricity supply) as recorded by the meter since installation. The relevant unitCode should be specified such as KWH (Kilo Watt Hours) for Electricity, LTR (Litre) or MTQ (Cubic Metre) for gases or liquids. | Optional |
 | powerFactor | Property | Relevant to 3-Phase electricity supplies often used in industry - the power factor ranges from -1 to +1 depending on the net balance between capacitive and inductive loads. If used this measures the average power factor since meter installation. | Optional |
-| place | Property | Confirmation of the current location for the Smart Meter | Optional |
+| place | Property | Confirmation of the current location for the Smart Meter. This may be used to confirm a delivery address for example for the supply of fuel/ gas product. | Optional |
 
 ## NGSI-LD Context Definition
 The following NGSI-LD context definition applies to the **Smart Meter Observed** entity
