@@ -22,8 +22,9 @@ This entity contains a generic model for the resulting outputs from an AI/ Machi
 
  + *classification* designates the corresponding value is a result of classifying the input into one of a finite set of pre-defined 'named' classifications. This will usually have a text value.
  + *quantity* designates the corresponding value as a result of determining a numeric value from the source - the result will be a real (numeric) value.
- + *confidence* designates the corresponding confidence level in the classification, with values between 0 (no confidence) and 1 (100% confidence).
  + *text* indicates that the recognition process has identified a textual value, this could be from either voice or image recognition.
+ + *action* indicates that a specified action has been determined during the recognition process. This could be a human or machine readable textual value, or a numeric action code.
+ + *confidence* designates the corresponding confidence level in the classification, with values between 0 (no confidence) and 1 (100% confidence).
  + *startTimecode* relevant to audio recognition and indicates the starting timecode (*hhh:mm:ss.ccc* - hours, minutes, seconds and milliseconds) of a recognised word in the *text* field.
  + *endTimecode* relevant to audio recognition and indicates the ending timecode (*hhh:mm:ss.ccc* - hours, minutes, seconds and milliseconds) of a recognised word in the *text* field.
  + *polygon* relevant to image recognition this indicates the area of the source frame that contains the recognised feature. This will be an array of pixel positions representing a closed polygon of 3 or more sides e.g. *[[x1,y1],[x2,y2],[x3,y3],[x4,y4],[x1,y1]]* relative to the bottom left of the source image.
