@@ -15,11 +15,11 @@ This entity contains a generic model for the resulting outputs from an AI/ Machi
 | processedDuration | TemporalProperty | Indicates the elapsed time required to process the input (in hours, minutes and seconds). | Optional |
 | recognisedFeatures | Property | The 'features' that were recognised from the input data. This should be an array of objects representing the output from the recognition process, though the contents of each result object will be specific to the recognition process. The actual contents of this will depend on the design of the recognition engine. See additional notes below. | Mandatory |
 
-###recognisedFeatures notes
+###recognisedFeatures sub-fields & notes
 
  the purpose of the *recognisedFeatures* property is to hold any of the results from the recognition process. Since recognition tasks are application specific this means that there will be various types of response that need to be supported. Also whilst certain recognition processes might identify single values such as the classification of an object, or a single numerical value, in the general case the recognition process could be generating multiple results and this is why this property is coded as an array.
 
- It is recommended that certain field names have defined meanings within the recognition results. For example
+ It is recommended that certain sub-field names have defined meanings within the recognition results. For example
 
  + *classification* designates the corresponding value is a result of classifying the input into one of a finite set of pre-defined 'named' classifications. This will usually have a text value.
  + *quantity* designates the corresponding value as a result of determining a numeric value from the source - the result will be a real (numeric) value.
@@ -30,7 +30,7 @@ This entity contains a generic model for the resulting outputs from an AI/ Machi
  + *endTimecode* relevant to audio recognition and indicates the ending timecode (*hhh:mm:ss.ccc* - hours, minutes, seconds and milliseconds) of a recognised word in the *text* field.
  + *polygon* relevant to image recognition this indicates the area of the source frame that contains the recognised feature. This will be an array of pixel positions representing a closed polygon of 3 or more sides e.g. *[[x1,y1],[x2,y2],[x3,y3],[x4,y4],[x1,y1]]* relative to the bottom left of the source image.
 
- Custom fields that have more application specific uses can also be added to the above list as necessary.
+ Custom fields that have more application specific uses can also be added to the above list as necessary but should use different field names.
 
 ## NGSI-LD Context Definition
 The following NGSI-LD context definition applies to the **Recogniser Result** entity
