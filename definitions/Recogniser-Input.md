@@ -11,7 +11,7 @@ This entity contains a generic model for an input to an AI/ Machine Learning bas
 | dataProvider | Property | Specifies the URL to information about the provider of this information | Recommended |
 | entityVersion | Property | The entity specification version as a number. A version number of 2.0 or later denotes the entity is represented using NGSI-LD | Recommended |
 | contentType | Property | The IETF MIME format of the source content being provided | Mandatory |
-| data | Property | The content, generally encoded from binary source data e.g. a JPEG format photo to produce ASCII format text. The binary data must be converted to ASCII text using the base64 encoding standard. | Mandatory |
+| media | Property | The media content, generally encoded from binary source data e.g. a JPEG format photo to produce ASCII format text. The binary data must be converted to ASCII text using the base64 encoding standard. | Mandatory |
 | observedAt | TemporalProperty | Indicates the date/time when the content was obtained. | Mandatory |
 | device | Relationship | Reference to the IoT device (such as a CCTV camera or microphone) which generated the data. | Optional |
 | location | GeoProperty | The geo:json encoded GPS position of the source device when the content was obtained. | Optional |
@@ -66,7 +66,7 @@ The following is an example instance of the **Recogniser Input** entity
         "type": "Property",
         "value": "image/jpeg"
     },
-    "data": {
+    "media": {
         "type": "Property",
         "value": "iVBORw0KGgoAAAANSUhEUgAAAGcAAABkCAIAAAAUt...ErkJggg=="
     },
