@@ -12,9 +12,9 @@ This entity contains a harmonised description of a Smart Meter, generally applic
 | entityVersion | Property | The entity specification version as a number. A version number of 2.0 or later denotes the entity is represented using NGSI-LD | Recommended |
 | meterType | Property | The type of supply being metered e.g.: **Electricity, Gasoline, Water, Methane, Diesel.** | Mandatory |
 | device | Relationship | Reference to the base IoT device definition for the smart meter to cover standard attributes such as serial number, manufacturer etc. | Mandatory |
-| location | GeoProperty | The geo:json encoded GPS position of the installed Smart Meter. | Mandatory |
+| location | GeoProperty | The geo:json encoded GPS position where a fixed location Smart Meter is installed e.g. a home/ building. | Optional |
 | photo | Property | A picture of the meter installation. Comprises the text string encoded from the binary data of a JPEG format photo of the meter. The binary data must be converted to ASCII text using the base64 encoding standard. | Recommended |
-| place | Property | Alternate specification of the installation location for the Smart Meter | Optional |
+| place | Property | Alternate specification of the installation location for a fixed position Smart Meter | Optional |
 
 ## NGSI-LD Context Definition
 The following NGSI-LD context definition applies to the **Smart Meter** entity
