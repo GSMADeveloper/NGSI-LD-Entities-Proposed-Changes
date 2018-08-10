@@ -88,7 +88,8 @@ The following is an example instance of the **Recogniser Result** entity
             {
                 "classification": "car",
                 "registration": "8128",
-                "confidence": 0.98
+                "confidence": 0.98,
+                "action": "none"
             }
         ]
     }
