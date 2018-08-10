@@ -15,8 +15,8 @@ This entity contains a generic model for the resulting outputs from an AI/ Machi
 | processedDuration | TemporalProperty | Indicates the elapsed time required to process the input (in hours, minutes and seconds). | Optional |
 | recognisedFeatures | Property | The 'features' that were recognised from the input data. This should be an array of objects representing the output from the recognition process, though the contents of each result object will be specific to the recognition process. The actual contents of this will depend on the design of the recognition engine. See additional notes below. | Mandatory |
 
-###recognisedFeatures sub-fields & notes
 
+###recognisedFeatures sub-fields & notes
  the purpose of the *recognisedFeatures* property is to hold any of the results from the recognition process. Since recognition tasks are application specific this means that there will be various types of response that need to be supported. Also whilst certain recognition processes might identify single values such as the classification of an object, or a single numerical value, in the general case the recognition process could be generating multiple results and this is why this property is coded as an array.
 
  It is recommended that certain sub-field names have defined meanings within the recognition results. For example
