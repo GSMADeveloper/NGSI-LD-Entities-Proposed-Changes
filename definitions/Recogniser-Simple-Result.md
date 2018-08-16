@@ -13,7 +13,7 @@ This entity contains a generic model for a simple result output from an AI/ Mach
 | recogniserInput | Relationship | Reference to the Recogniser Input that this result is related to. | Mandatory |
 | processedAt | TemporalProperty | Indicates the date/time when the processing completed. | Mandatory |
 | processedDuration | TemporalProperty | Indicates the elapsed time required to process the input (in hours, minutes and seconds). | Optional |
-| result | Property | The output from the recogniser process. This can be application specific and is expected to be either text (such as the output from classification) or a numeric value (such as the output from regression). If there is a more complex result output e.g. for multiple features the RecogniserResult entity is recommended instead. | Mandatory |
+| result | Property | The output from the recogniser process. This can be application specific and is expected to be either text (such as the output from classification) or a numeric value (such as the output from regression). If there is a more complex result output e.g. for multiple features the RecogniserResult entity is recommended instead of this entity. | Mandatory |
 
 ## NGSI-LD Context Definition
 The following NGSI-LD context definition applies to the **Recogniser Simple Result** entity
