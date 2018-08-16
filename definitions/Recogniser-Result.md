@@ -1,5 +1,5 @@
 # Recogniser Result
-This entity contains a generic model for the resulting outputs from an AI/ Machine Learning based image/audio recogniser
+This entity contains a generic model for the resulting outputs from an AI/ Machine Learning based image/audio recogniser where multiple features are processed.
 
 | Attribute Name | Attribute Type | Description | Constraint |
 |:--- |:--- |:--- |:---:|
@@ -18,6 +18,8 @@ This entity contains a generic model for the resulting outputs from an AI/ Machi
 
 ### recognisedFeatures sub-fields & notes
  the purpose of the *recognisedFeatures* property is to hold any of the results from the recognition process. Since recognition tasks are application specific this means that there will be various types of response that need to be supported. Also whilst certain recognition processes might identify single values such as the classification of an object, or a single numerical value, in the general case the recognition process could be generating multiple results and this is why this property is coded as an array.
+
+ In the case that only a simple result or action is produced the RecogniserSimpleResult entity can be used rather than this more generic model.
 
  It is recommended that certain sub-field names have defined meanings within the recognition results. For example
 
