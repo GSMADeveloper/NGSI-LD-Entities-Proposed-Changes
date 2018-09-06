@@ -68,7 +68,7 @@ The following is an example instance of the **Recogniser Input** entity
 {
     "@context": [
         "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/coreContext/ngsi-ld-core-context.json",
-        "https://github.com/GSMADeveloper/NGSI-LD-Entities/tree/master/examples/Recogniser-Input-context.jsonld"
+        "https://raw.githubusercontent.com/GSMADeveloper/NGSI-LD-Entities-Proposed-Changes/master/examples/Recogniser-Input-context.jsonld"
     ],
     "id": "urn:ngsi-ld:RecogniserInput:4aad67e8-9ae2-11e8-a2a9-f77b8d50602c",
     "type": "RecogniserInput",

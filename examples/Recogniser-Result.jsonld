@@ -1,7 +1,7 @@
 {
     "@context": [
         "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/coreContext/ngsi-ld-core-context.json",
-        "https://raw.githubusercontent.com/GSMADeveloper/NGSI-LD-Entities/master/examples/Recogniser-Result-context.jsonld"
+        "https://raw.githubusercontent.com/GSMADeveloper/NGSI-LD-Entities-Proposed-Changes/master/examples/Recogniser-Result-context.jsonld"
     ],
     "id": "urn:ngsi-ld:RecogniserResult:0df4c88a-9ae4-11e8-965d-0f9a6c9e5225",
     "type": "RecogniserResult",

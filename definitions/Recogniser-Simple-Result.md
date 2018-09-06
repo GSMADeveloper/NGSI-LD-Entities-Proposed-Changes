@@ -61,7 +61,7 @@ The following is an example instance of the **Recogniser Simple Result** entity
 {
     "@context": [
         "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/coreContext/ngsi-ld-core-context.json",
-        "https://github.com/GSMADeveloper/NGSI-LD-Entities/tree/master/examples/Recogniser-Simple-Result-context.jsonld"
+        "https://raw.githubusercontent.com/GSMADeveloper/NGSI-LD-Entities-Proposed-Changes/master/examples/Recogniser-Simple-Result-context.jsonld"
     ],
     "id": "urn:ngsi-ld:RecogniserSimpleResult:4ec233e6-a135-11e8-8235-e73012e70d05",
     "type": "RecogniserSimpleResult",

@@ -78,7 +78,7 @@ The following is an example instance of the **Smart Meter Observed** entity
 {
     "@context": [
         "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/coreContext/ngsi-ld-core-context.json",
-        "https://github.com/GSMADeveloper/NGSI-LD-Entities/tree/master/examples/Smart-Meter-Observed-context.jsonld"
+        "https://raw.githubusercontent.com/GSMADeveloper/NGSI-LD-Entities-Proposed-Changes/master/examples/Smart-Meter-Observed-context.jsonld"
     ],
     "id": "urn:ngsi-ld:SmartMeterObserved:bc7930aa-965f-11e8-b327-2be817efd126",
     "type": "SmartMeterObserved",

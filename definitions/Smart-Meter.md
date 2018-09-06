@@ -62,7 +62,7 @@ The following is an example instance of the **Smart Meter** entity
 {
     "@context": [
         "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/coreContext/ngsi-ld-core-context.json",
-        "https://github.com/GSMADeveloper/NGSI-LD-Entities/tree/master/examples/Smart-Meter-context.jsonld"
+        "https://raw.githubusercontent.com/GSMADeveloper/NGSI-LD-Entities-Proposed-Changes/master/examples/Smart-Meter-context.jsonld"
     ],
     "id": "urn:ngsi-ld:SmartMeter:8ac0db56-9adf-11e8-ad67-e7308e2e8b15",
     "type": "SmartMeter",
