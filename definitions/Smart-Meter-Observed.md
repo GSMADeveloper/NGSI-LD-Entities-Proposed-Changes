@@ -27,23 +27,45 @@ The following NGSI-LD context definition applies to the **Smart Meter Observed**
 
 ```JavaScript
 {
-    "id": "@id",
-    "type": "@type",
-    "DateTime": "http://uri.etsi.org/ngsi-ld/DateTime",
-    "createdAt": {
-        "@id": "http://uri.etsi.org/ngsi-ld/createdAt",
-        "@type": "DateTime"
+    "source": {
+        "@id": "http://etsi.org/nsgi-ld/Property",
+        "@type": "Property"
     },
-    "modifiedAt": {
-        "@id": "http://uri.etsi.org/ngsi-ld/modifiedAt",
-        "@type": "DateTime"
+    "dataProvider": {
+        "@id": "http://etsi.org/nsgi-ld/Property",
+        "@type": "Property"
     },
-    "Property": "http://etsi.org/nsgi-ld/Property",
-    "Relationship": "http://uri.etsi.org/ngsi-ld/Relationship",
-    "GeoProperty": "http://uri.etsi.org/ngsi-ld/GeoProperty",
-    "observedAt": {
-        "@id": "http://uri.etsi.org/ngsi-ld/observedAt",
-        "@type": "DateTime"
+    "entityVersion": {
+        "@id": "http://etsi.org/nsgi-ld/Property",
+        "@type": "Property"
+    },
+    "smartMeter": {
+        "@id": "http://uri.etsi.org/ngsi-ld/Relationship",
+        "@type": "Relationship"
+    },
+    "totalConsumption": {
+        "@id": "http://etsi.org/nsgi-ld/Property",
+        "@type": "Property"
+    },
+    "photo": {
+        "@id": "http://etsi.org/nsgi-ld/Property",
+        "@type": "Property"
+    },
+    "peakConsumption": {
+        "@id": "http://etsi.org/nsgi-ld/Property",
+        "@type": "Property"
+    },
+    "offPeakConsumption": {
+        "@id": "http://etsi.org/nsgi-ld/Property",
+        "@type": "Property"
+    },
+    "powerFactor": {
+        "@id": "http://etsi.org/nsgi-ld/Property",
+        "@type": "Property"
+    },
+    "place": {
+        "@id": "http://etsi.org/nsgi-ld/Property",
+        "@type": "Property"
     }
 }
 ```
@@ -55,7 +77,7 @@ The following is an example instance of the **Smart Meter Observed** entity
 ```JavaScript
 {
     "@context": [
-        "https://example.com/contexts/coreContext.jsonld",
+        "https://forge.etsi.org/gitlab/NGSI-LD/NGSI-LD/raw/master/coreContext/ngsi-ld-core-context.json",
         "https://github.com/GSMADeveloper/NGSI-LD-Entities/tree/master/examples/Smart-Meter-Observed-context.jsonld"
     ],
     "id": "urn:ngsi-ld:SmartMeterObserved:bc7930aa-965f-11e8-b327-2be817efd126",
@@ -109,7 +131,7 @@ The following is an example instance of the **Smart Meter Observed** entity
     },
     "place": {
         "type": "Property",
-        "address": {
+        "value": {
             "type": "PostalAddress",
             "addressLocality": "London",
             "postalCode": "EC4N 8AF",
