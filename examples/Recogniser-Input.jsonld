@@ -14,13 +14,13 @@
         "type": "Property",
         "value": "image/jpeg"
     },
-    "mediaEncoded": {
-        "type": "Property",
-        "value": "iVBORw0KGgoAAAANSUhEUgAAAGcAAABkCAIAAAAUt...ErkJggg=="
-    },
     "mediaUri": {
         "type": "Property",
         "value": "https://example.com/image/100890.jpeg"
+    },
+    "mediaEncoded": {
+        "type": "Property",
+        "value": "iVBORw0KGgoAAAANSUhEUgAAAGcAAABkCAIAAAAUt...ErkJggg=="
     },
     "observedAt": {
         "type": "TemporalProperty",

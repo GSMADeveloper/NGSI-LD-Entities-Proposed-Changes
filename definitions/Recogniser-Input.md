@@ -11,8 +11,8 @@ This entity contains a generic model for an input to an AI/ Machine Learning bas
 | dataProvider | Property | Specifies the URL to information about the provider of this information | Recommended |
 | entityVersion | Property | The entity specification version as a number. A version number of 2.0 or later denotes the entity is represented using NGSI-LD | Recommended |
 | contentType | Property | The IETF MIME format of the source content being provided | Mandatory |
-| mediaEncoded | Property | The media content, generally encoded from binary source data e.g. a JPEG format photo to produce ASCII format text. The binary data must be converted to ASCII text using the base64 encoding standard.<br/><br/>Either mediaEncoded or mediaUri should be provided but not both. | Optional |
-| mediaUri | Property | The media content referenced by a URI.<br/><br/>Either mediaEncoded or mediaUri should be provided but not both. | Optional |
+| mediaUri | Property | The media content referenced by a URI.<br/><br/>Either mediaEncoded or mediaUri should be provided but not both, if both are provided mediaUri should be prioritised. | Recommended |
+| mediaEncoded | Property | The media content, generally encoded from binary source data e.g. a JPEG format photo to produce ASCII format text. The binary data must be converted to ASCII text using the base64 encoding standard.<br/><br/>Either mediaEncoded or mediaUri should be provided but not both, if both are provided mediaUri should be prioritised. | Optional |
 | observedAt | TemporalProperty | Indicates the date/time when the content was obtained. | Mandatory |
 | device | Relationship | Reference to the IoT device (such as a CCTV camera or microphone) which generated the data. | Optional |
 | location | GeoProperty | The geo:json encoded GPS position of the source device when the content was obtained. | Optional |
@@ -41,11 +41,11 @@ The following NGSI-LD context definition applies to the **Recogniser Input** ent
         "@id": "http://etsi.org/nsgi-ld/Property",
         "@type": "Property"
     },
-    "mediaEncoded": {
+    "mediaUri": {
         "@id": "http://etsi.org/nsgi-ld/Property",
         "@type": "Property"
     },
-    "mediaUri": {
+    "mediaEncoded": {
         "@id": "http://etsi.org/nsgi-ld/Property",
         "@type": "Property"
     },
@@ -81,13 +81,13 @@ The following is an example instance of the **Recogniser Input** entity
         "type": "Property",
         "value": "image/jpeg"
     },
-    "mediaEncoded": {
-        "type": "Property",
-        "value": "iVBORw0KGgoAAAANSUhEUgAAAGcAAABkCAIAAAAUt...ErkJggg=="
-    },
     "mediaUri": {
         "type": "Property",
         "value": "https://example.com/image/100890.jpeg"
+    },
+    "mediaEncoded": {
+        "type": "Property",
+        "value": "iVBORw0KGgoAAAANSUhEUgAAAGcAAABkCAIAAAAUt...ErkJggg=="
     },
     "observedAt": {
         "type": "TemporalProperty",

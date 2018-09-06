@@ -15,11 +15,11 @@
         "@id": "http://etsi.org/nsgi-ld/Property",
         "@type": "Property"
     },
-    "mediaEncoded": {
+    "mediaUri": {
         "@id": "http://etsi.org/nsgi-ld/Property",
         "@type": "Property"
     },
-    "mediaUri": {
+    "mediaEncoded": {
         "@id": "http://etsi.org/nsgi-ld/Property",
         "@type": "Property"
     },
