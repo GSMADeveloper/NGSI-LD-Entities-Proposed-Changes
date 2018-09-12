@@ -27,46 +27,16 @@ The following NGSI-LD context definition applies to the **Smart Meter Observed**
 
 ```JavaScript
 {
-    "source": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
-        "@type": "Property"
-    },
-    "dataProvider": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
-        "@type": "Property"
-    },
-    "entityVersion": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
-        "@type": "Property"
-    },
-    "smartMeter": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/smartmeter",
-        "@type": "Relationship"
-    },
-    "totalConsumption": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/totalconsumption",
-        "@type": "Property"
-    },
-    "photo": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/photo",
-        "@type": "Property"
-    },
-    "peakConsumption": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/peakconsumption",
-        "@type": "Property"
-    },
-    "offPeakConsumption": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/offpeakconsumption",
-        "@type": "Property"
-    },
-    "powerFactor": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/powerfactor",
-        "@type": "Property"
-    },
-    "place": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/place",
-        "@type": "Property"
-    }
+    "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
+    "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
+    "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
+    "smartMeter": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/smartmeter",
+    "totalConsumption": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/totalconsumption",
+    "photo": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/photo",
+    "peakConsumption": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/peakconsumption",
+    "offPeakConsumption": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/offpeakconsumption",
+    "powerFactor": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/powerfactor",
+    "place": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/place"
 }
 ```
 ## Example of Smart Meter Observed Entity

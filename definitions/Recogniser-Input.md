@@ -25,38 +25,14 @@ The following NGSI-LD context definition applies to the **Recogniser Input** ent
 
 ```JavaScript
 {
-    "source": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
-        "@type": "Property"
-    },
-    "dataProvider": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
-        "@type": "Property"
-    },
-    "entityVersion": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
-        "@type": "Property"
-    },
-    "contentType": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/contenttype",
-        "@type": "Property"
-    },
-    "mediaUri": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/mediauri",
-        "@type": "Property"
-    },
-    "mediaEncoded": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/mediaencoded",
-        "@type": "Property"
-    },
-    "device": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/device",
-        "@type": "Relationship"
-    },
-    "metadata": {
-        "@id": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/metadata",
-        "@type": "Property"
-    }
+    "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
+    "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
+    "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
+    "contentType": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/contenttype",
+    "mediaUri": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/mediauri",
+    "mediaEncoded": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/mediaencoded",
+    "device": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/device",
+    "metadata": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/metadata"
 }
 ```
 ## Example of Recogniser Input Entity
