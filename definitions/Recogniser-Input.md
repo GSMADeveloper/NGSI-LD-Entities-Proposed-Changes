@@ -14,6 +14,7 @@ This entity contains a generic model for an input to an AI/ Machine Learning bas
 | mediaUri | Property | The media content referenced by a URI.<br/><br/>Either mediaEncoded or mediaUri should be provided but not both, if both are provided mediaUri should be prioritised. | Recommended |
 | mediaEncoded | Property | The media content, generally encoded from binary source data e.g. a JPEG format photo to produce ASCII format text. The binary data must be converted to ASCII text using the base64 encoding standard.<br/><br/>Either mediaEncoded or mediaUri should be provided but not both, if both are provided mediaUri should be prioritised. | Optional |
 | observedAt | TemporalProperty | Indicates the date/time when the content was obtained. | Mandatory |
+| observedLocation | GeoProperty | The geo:json encoded GPS position of the observed location when the content was obtained. | Optional |
 | device | Relationship | Reference to the IoT device (such as a CCTV camera or microphone) which generated the data. | Optional |
 | location | GeoProperty | The geo:json encoded GPS position of the source device when the content was obtained. | Optional |
 | metadata | Property | Any additional metadata that accompanies the content source, provided as key/value pairs. | Optional |
@@ -31,6 +32,7 @@ The following NGSI-LD context definition applies to the **Recogniser Input** ent
     "contentType": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/contenttype",
     "mediaUri": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/mediauri",
     "mediaEncoded": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/mediaencoded",
+    "observedLocation": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/observedlocation",
     "device": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/device",
     "metadata": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/metadata"
 }
@@ -69,6 +71,16 @@ The following is an example instance of the **Recogniser Input** entity
         "type": "TemporalProperty",
         "value": "2018-05-04T10:18:16Z"
     },
+    "observedLocation": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -0.085972,
+                51.510153
+            ]
+        }
+    },
     "device": {
         "type": "Relationship",
         "object": "urn:ngsi-ld:Device:7a0708f6-9668-11e8-8f77-abc2b62ebaac"
@@ -78,8 +90,8 @@ The following is an example instance of the **Recogniser Input** entity
         "value": {
             "type": "Point",
             "coordinates": [
-                -103.9904,
-                39.7564
+                -0.086127,
+                51.510286
             ]
         }
     },

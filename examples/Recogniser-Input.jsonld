@@ -26,6 +26,16 @@
         "type": "TemporalProperty",
         "value": "2018-05-04T10:18:16Z"
     },
+    "observedLocation": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -0.085972,
+                51.510153
+            ]
+        }
+    },
     "device": {
         "type": "Relationship",
         "object": "urn:ngsi-ld:Device:7a0708f6-9668-11e8-8f77-abc2b62ebaac"
@@ -35,8 +45,8 @@
         "value": {
             "type": "Point",
             "coordinates": [
-                -103.9904,
-                39.7564
+                -0.086127,
+                51.510286
             ]
         }
     },
