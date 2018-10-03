@@ -31,6 +31,7 @@ This entity contains a generic model for the resulting outputs from an AI/ Machi
  + *startTimecode* relevant to audio recognition and indicates the starting timecode (*hhh:mm:ss.ccc* - hours, minutes, seconds and milliseconds) of a recognised word in the *text* field.
  + *endTimecode* relevant to audio recognition and indicates the ending timecode (*hhh:mm:ss.ccc* - hours, minutes, seconds and milliseconds) of a recognised word in the *text* field.
  + *polygon* relevant to image recognition this indicates the area of the source frame that contains the recognised feature. This will be an array of pixel positions representing a closed polygon of 3 or more sides e.g. *[[x1,y1],[x2,y2],[x3,y3],[x4,y4],[x1,y1]]* relative to the bottom left of the source image.
+ + *mediaUri* reference to the extracted section of the image or audio that the feature was recognised in, with the media content referenced by a URI.
 
  Custom fields that have more application specific uses can also be added to the above list as necessary but should use different field names.
 
