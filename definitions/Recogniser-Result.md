@@ -10,7 +10,7 @@ This entity contains a generic model for the resulting outputs from an AI/ Machi
 | source | Property | Specifies the URL to the source of this data (either organisation or where relevant more specific source) | Recommended |
 | dataProvider | Property | Specifies the URL to information about the provider of this information | Recommended |
 | entityVersion | Property | The entity specification version as a number. A version number of 2.0 or later denotes the entity is represented using NGSI-LD | Recommended |
-| recogniserInput | Relationship | Reference to the Recogniser Input that this result is related to. | Mandatory |
+| input | Relationship | Reference to the input that was used to develop this result, this would usually be a 'RecogniserInput' for a direct source or a 'RecogniserOutput' in the case that a previous stage of recognition is being used. | Mandatory |
 | processedAt | TemporalProperty | Indicates the date/time when the processing completed. | Mandatory |
 | processedDuration | TemporalProperty | Indicates the elapsed time required to process the input (in hours, minutes and seconds). | Optional |
 | recognisedFeatures | Property | The 'features' that were recognised from the input data. This should be an array of objects representing the output from the recognition process, though the contents of each result object will be specific to the recognition process. The actual contents of this will depend on the design of the recognition engine. See additional notes below. | Mandatory |
@@ -45,7 +45,7 @@ The following NGSI-LD context definition applies to the **Recogniser Result** en
     "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
     "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
     "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
-    "recogniserInput": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/recogniserinput",
+    "input": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/input",
     "processedAt": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/processedat",
     "processedDuration": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/processedduration",
     "recognisedFeatures": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/recognisedfeatures"
@@ -69,7 +69,7 @@ The following is an example instance of the **Recogniser Result** entity
     "source": "https://source.example.com",
     "dataProvider": "https://provider.example.com",
     "entityVersion": 2.0,
-    "recogniserInput": {
+    "input": {
         "type": "Relationship",
         "object": "urn:ngsi-ld:RecogniserInput:4aad67e8-9ae2-11e8-a2a9-f77b8d50602c"
     },
