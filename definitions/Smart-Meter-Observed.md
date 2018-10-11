@@ -27,16 +27,18 @@ The following NGSI-LD context definition applies to the **Smart Meter Observed**
 
 ```JavaScript
 {
-    "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
-    "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
-    "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
-    "smartMeter": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/smartmeter",
-    "totalConsumption": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/totalconsumption",
-    "photo": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/photo",
-    "peakConsumption": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/peakconsumption",
-    "offPeakConsumption": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/offpeakconsumption",
-    "powerFactor": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/powerfactor",
-    "place": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/place"
+    "@context": {
+        "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
+        "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
+        "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
+        "smartMeter": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/smartmeter",
+        "totalConsumption": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/totalconsumption",
+        "photo": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/photo",
+        "peakConsumption": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/peakconsumption",
+        "offPeakConsumption": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/offpeakconsumption",
+        "powerFactor": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/powerfactor",
+        "place": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/place"
+    }
 }
 ```
 ## Example of Smart Meter Observed Entity
@@ -102,7 +104,7 @@ The following is an example instance of the **Smart Meter Observed** entity
     "place": {
         "type": "Property",
         "value": {
-            "type": "PostalAddress",
+            "@type": "PostalAddress",
             "addressLocality": "London",
             "postalCode": "EC4N 8AF",
             "streetAddress": "25 Walbrook"

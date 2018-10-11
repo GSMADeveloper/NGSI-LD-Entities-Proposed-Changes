@@ -22,13 +22,15 @@ The following NGSI-LD context definition applies to the **Recogniser Simple Resu
 
 ```JavaScript
 {
-    "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
-    "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
-    "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
-    "recogniserInput": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/recogniserinput",
-    "processedAt": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/processedat",
-    "processedDuration": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/processedduration",
-    "result": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/result"
+    "@context": {
+        "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
+        "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
+        "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
+        "recogniserInput": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/recogniserinput",
+        "processedAt": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/processedat",
+        "processedDuration": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/processedduration",
+        "result": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/result"
+    }
 }
 ```
 ## Example of Recogniser Simple Result Entity

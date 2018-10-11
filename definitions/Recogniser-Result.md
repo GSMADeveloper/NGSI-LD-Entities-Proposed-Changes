@@ -42,13 +42,15 @@ The following NGSI-LD context definition applies to the **Recogniser Result** en
 
 ```JavaScript
 {
-    "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
-    "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
-    "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
-    "input": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/input",
-    "processedAt": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/processedat",
-    "processedDuration": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/processedduration",
-    "recognisedFeatures": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/recognisedfeatures"
+    "@context": {
+        "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
+        "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
+        "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
+        "input": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/input",
+        "processedAt": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/processedat",
+        "processedDuration": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/processedduration",
+        "recognisedFeatures": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/recognisedfeatures"
+    }
 }
 ```
 ## Example of Recogniser Result Entity

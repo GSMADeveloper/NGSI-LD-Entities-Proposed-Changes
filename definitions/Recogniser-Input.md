@@ -26,15 +26,17 @@ The following NGSI-LD context definition applies to the **Recogniser Input** ent
 
 ```JavaScript
 {
-    "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
-    "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
-    "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
-    "contentType": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/contenttype",
-    "mediaUri": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/mediauri",
-    "mediaEncoded": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/mediaencoded",
-    "observedLocation": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/observedlocation",
-    "device": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/device",
-    "metadata": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/metadata"
+    "@context": {
+        "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
+        "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
+        "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
+        "contentType": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/contenttype",
+        "mediaUri": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/mediauri",
+        "mediaEncoded": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/mediaencoded",
+        "observedLocation": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/observedlocation",
+        "device": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/device",
+        "metadata": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/metadata"
+    }
 }
 ```
 ## Example of Recogniser Input Entity
@@ -61,7 +63,10 @@ The following is an example instance of the **Recogniser Input** entity
     },
     "mediaUri": {
         "type": "Property",
-        "value": "https://example.com/image/100890.jpeg"
+        "value": {
+            "@value": "https://example.com/image/100890.jpeg",
+            "@type": "https://schema.org/url"
+        }
     },
     "mediaEncoded": {
         "type": "Property",

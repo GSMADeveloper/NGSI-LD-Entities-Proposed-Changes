@@ -23,13 +23,15 @@ The following NGSI-LD context definition applies to the **Smart Meter** entity
 
 ```JavaScript
 {
-    "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
-    "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
-    "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
-    "meterType": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/metertype",
-    "device": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/device",
-    "photo": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/photo",
-    "place": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/place"
+    "@context": {
+        "source": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/source",
+        "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
+        "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
+        "meterType": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/metertype",
+        "device": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/device",
+        "photo": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/photo",
+        "place": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/place"
+    }
 }
 ```
 ## Example of Smart Meter Entity
@@ -75,7 +77,7 @@ The following is an example instance of the **Smart Meter** entity
     "place": {
         "type": "Property",
         "value": {
-            "type": "PostalAddress",
+            "@type": "PostalAddress",
             "addressLocality": "London",
             "postalCode": "EC4N 8AF",
             "streetAddress": "25 Walbrook"

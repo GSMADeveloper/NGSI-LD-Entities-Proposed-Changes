@@ -16,7 +16,10 @@
     },
     "mediaUri": {
         "type": "Property",
-        "value": "https://example.com/image/100890.jpeg"
+        "value": {
+            "@value": "https://example.com/image/100890.jpeg",
+            "@type": "https://schema.org/url"
+        }
     },
     "mediaEncoded": {
         "type": "Property",

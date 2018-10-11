@@ -55,7 +55,7 @@
     "place": {
         "type": "Property",
         "value": {
-            "type": "PostalAddress",
+            "@type": "PostalAddress",
             "addressLocality": "London",
             "postalCode": "EC4N 8AF",
             "streetAddress": "25 Walbrook"
