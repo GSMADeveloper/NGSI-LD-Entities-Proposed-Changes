@@ -32,6 +32,7 @@ The following NGSI-LD context definition applies to the **Smart Meter Observed**
         "dataProvider": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/dataprovider",
         "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
         "smartMeter": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/smartmeter",
+        "location": "http://uri.etsi.org/ngsi-ld/location",
         "totalConsumption": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/totalconsumption",
         "photo": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/photo",
         "peakConsumption": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/peakconsumption",
@@ -104,7 +105,7 @@ The following is an example instance of the **Smart Meter Observed** entity
     "place": {
         "type": "Property",
         "value": {
-            "@type": "PostalAddress",
+            "@type": "https://schema.org/PostalAddress",
             "addressLocality": "London",
             "postalCode": "EC4N 8AF",
             "streetAddress": "25 Walbrook"

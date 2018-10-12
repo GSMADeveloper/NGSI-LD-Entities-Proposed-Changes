@@ -29,6 +29,7 @@ The following NGSI-LD context definition applies to the **Smart Meter** entity
         "entityVersion": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/entityversion",
         "meterType": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/metertype",
         "device": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/device",
+        "location": "http://uri.etsi.org/ngsi-ld/location",
         "photo": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/photo",
         "place": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/place"
     }
@@ -77,7 +78,7 @@ The following is an example instance of the **Smart Meter** entity
     "place": {
         "type": "Property",
         "value": {
-            "@type": "PostalAddress",
+            "@type": "https://schema.org/PostalAddress",
             "addressLocality": "London",
             "postalCode": "EC4N 8AF",
             "streetAddress": "25 Walbrook"

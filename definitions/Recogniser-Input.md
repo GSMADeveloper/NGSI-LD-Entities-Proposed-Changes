@@ -35,6 +35,7 @@ The following NGSI-LD context definition applies to the **Recogniser Input** ent
         "mediaEncoded": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/mediaencoded",
         "observedLocation": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/observedlocation",
         "device": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/device",
+        "location": "http://uri.etsi.org/ngsi-ld/location",
         "metadata": "https://www.gsma.com/iot/iot-big-data/ngsi-ld/metadata"
     }
 }
